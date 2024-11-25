@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());  // For parsing JSON data
 app.use(
   cors({
-    origin: "http://localhost:5173", // Frontend URL
+    origin: process.env.FRONTEND_URL, // Frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
